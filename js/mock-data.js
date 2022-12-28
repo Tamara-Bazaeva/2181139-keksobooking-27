@@ -1,5 +1,5 @@
 import {features, types} from './static-data.js';
-import {getRandomArrayElementOrNull, getRandomArrayElements} from './utils.js';
+import {getRandomArrayElementOrNull, getRandomArrayElements, getRandomGeoLocation} from './utils.js';
 
 const avatars = [
   'img/avatars/user01.png',
@@ -15,24 +15,24 @@ const titles = [
   'Love Where You Live'
 ];
 
-const addresses = [
-  {
-    lat: 35.636362,
-    lng: 139.350206,
-  },
-  {
-    lat: 35.618131,
-    lng: 139.328577,
-  },
-  {
-    lat: 35.609666,
-    lng: 139.310420,
-  },
-  {
-    lat: 35.596857,
-    lng: 139.302143,
-  },
-];
+// const addresses = [
+//   {
+//     lat: 35.636362,
+//     lng: 139.350206,
+//   },
+//   {
+//     lat: 35.618131,
+//     lng: 139.328577,
+//   },
+//   {
+//     lat: 35.609666,
+//     lng: 139.310420,
+//   },
+//   {
+//     lat: 35.596857,
+//     lng: 139.302143,
+//   },
+// ];
 
 const prices = [
   10000,
@@ -89,7 +89,7 @@ function generateAdData() {
   return {
     avatar: getRandomArrayElementOrNull(avatars),
     title: getRandomArrayElementOrNull(titles),
-    address: getRandomArrayElementOrNull(addresses),
+    address: getRandomGeoLocation(36.3, 138.8, 35.7, 140),
     price: getRandomArrayElementOrNull(prices),
     type: getRandomArrayElementOrNull(types),
     rooms: roomsAndGuestsOption.rooms,

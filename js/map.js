@@ -9,13 +9,13 @@ const latLngToString = function (latLng, roundToDec = 5) {
 let map;
 
 const initMap = function () {
-  map = L.map('map-canvas')
+  map = L.map('map-canvas', { tap: false })
     .on('load', () => {
       toggleForm(true);
     })
     .setView({
-      lat: 35.6620,
-      lng: 139.7038,
+      lat: 36,
+      lng: 139.4,
     }, 10);
 
   L.tileLayer(
@@ -33,8 +33,8 @@ const initMap = function () {
 
   const mainPinMarker = L.marker(
     {
-      lat: 35.6620,
-      lng: 139.7038,
+      lat: 36,
+      lng: 139.4,
     },
     {
       draggable: true,
