@@ -1,12 +1,6 @@
-// import { generateMockAds } from './mock-data.js';
-import { initForm, toggleForms, initFilterForm } from './form.js';
-import { initMap } from './map.js';
+import { generateMockAds } from './mock-data.js';
 
-// const mockAds = generateMockAds();
+const mockAds = generateMockAds();
 
-initForm();
-initFilterForm();
-toggleForms(false);
-
-initMap();
-
+const mapCanvas = document.querySelector('#map-canvas');
+mapCanvas.appendChild(mockAds[0]);

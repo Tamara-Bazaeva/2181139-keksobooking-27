@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
-    "lint": "eslint --fix js/"
+    "lint": "eslint js/"
   },
   "engines": {
     "node": "16.x",

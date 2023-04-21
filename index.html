@@ -5,8 +5,6 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
   <title>Кексобукинг</title>
 </head>
 <body>
@@ -15,10 +13,6 @@
     <div class="promo">
       <h1 class="promo__title visually-hidden">Keksobooking. Кексы по соседству</h1>
       <img src="img/keksobooking.svg" alt="Keksobooking. Кексы по соседству" width="215" height="45">
-    </div>
-
-    <div class="network-error hidden">
-      <span>Ошибка загрузки данных</span>
     </div>
 
     <!-- Карта объявлений -->
@@ -77,15 +71,15 @@
     <!-- Форма объявления -->
     <section class="notice">
       <h2 class="notice__title">Ваше объявление</h2>
-      <form class="ad-form" method="post" action="https://27.javascript.pages.academy/keksobooking" enctype="multipart/form-data" autocomplete="off">
+      <form class="ad-form" method="post" enctype="multipart/form-data" autocomplete="off">
         <fieldset class="ad-form-header">
           <legend class="ad-form-header__title">Ваша фотография (для карты)</legend>
           <div class="ad-form-header__upload">
             <div class="ad-form-header__preview">
-              <img src="img/muffin-grey.svg" alt="Аватар пользователя" width="40" height="44" id="ad-form-avatar">
+              <img src="img/muffin-grey.svg" alt="Аватар пользователя" width="40" height="44">
             </div>
             <div class="ad-form__field">
-              <input type="file" id="avatar" accept="image/png, image/gif, image/jpeg" name="avatar" class="ad-form-header__input visually-hidden">
+              <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden">
               <label class="ad-form-header__drop-zone" for="avatar">Загрузить<br>фото...</label>
             </div>
             <p class="ad-form-header__info">Заполните все обязательные поля, назначьте цену, загрузите аватар и фото жилья. Придумайте интересное описание. Оно сделает объявление более живым и привлекательным. Получившееся объявление должно давать гостям полное представление о вашем жилье.</p>
@@ -93,11 +87,11 @@
         </fieldset>
         <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="title">Заголовок объявления</label>
-          <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио" required minlength="30" maxlength="100">
+          <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио">
         </fieldset>
         <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="address">Адрес (координаты)</label>
-          <input id="address" name="address" type="text" readonly>
+          <input id="address" name="address" type="text">
         </fieldset>
         <fieldset class="ad-form__element">
           <label class="ad-form__label" for="type">Тип жилья</label>
@@ -111,8 +105,8 @@
         </fieldset>
         <fieldset class="ad-form__element">
           <label class="ad-form__label" for="price">Цена за ночь, руб.</label>
-          <input id="price" name="price" type="number" placeholder="5000" min="1000" max="100000" required>
-          <div class="ad-form__slider" id="slider"></div>
+          <input id="price" name="price" type="number" placeholder="5000">
+          <div class="ad-form__slider"></div>
         </fieldset>
         <fieldset class="ad-form__element ad-form__element--time">
           <label class="ad-form__label" for="timein">Время заезда и выезда</label>
@@ -168,7 +162,7 @@
           <label class="ad-form__label">Фотография жилья</label>
           <div class="ad-form__photo-container">
             <div class="ad-form__upload">
-              <input type="file" id="images" name="images" accept="image/png, image/gif, image/jpeg" multiple class="ad-form__input visually-hidden">
+              <input type="file" id="images" name="images" class="ad-form__input visually-hidden">
               <label for="images" class="ad-form__drop-zone">Загрузить<br>фото...</label>
             </div>
             <div class="ad-form__photo"></div>
@@ -234,9 +228,6 @@
       <button type="button" class="error__button">Попробовать снова</button>
     </div>
   </template>
-  <script src="js/main.js" type="module"></script>
-  <script src="vendor/pristine/pristine.min.js" type="text/javascript"></script>
-  <script src="vendor/leaflet/leaflet.js" type="text/javascript"></script>
-  <script src="vendor/nouislider/nouislider.js" type="text/javascript"></script>
+
 </body>
 </html>
